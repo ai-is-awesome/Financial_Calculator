@@ -26,6 +26,8 @@ def compound_interest(amount, interest, num_times_int, time_period, time_period_
     print(n)
     print('Effective n is %i' % (n * time_period_years))
     total_investment = amount * (1 + (interest / n)) ** (n * time_period_years)
+    if total_investment >= 1000000000:
+        total_investment = int(total_investment)
     return total_investment
     
     
