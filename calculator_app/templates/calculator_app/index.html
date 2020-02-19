@@ -2,38 +2,15 @@
 
 
 {% block content %}
-<h1>Suck my fat cock</h1>
+<div class = "container">
+	<div class = "jumbotron">
+		<h1>Welcome to Financial Calculator</h1>
 
-<!-- 
-<form action = "{% url 'results_interest' %}" method = "POST">
+		<p>Hi, this is my first website. It allows you to calculate periodic compound interests and also allows you to calculate loan predictions. There are lots of new features that are coming.<br><br>
+		To get started, <a href = "{% url 'interest_calculator' %}">Here's a link to interest calculator.</a>  Enjoy</p>
+	</div>
+</div>
 
-	{% csrf_token %}
-
-
-	<label for = 1>Enter a number: </label>
-	<input type = "text" name = "num1" id = 1>
-	
-	<br>
-
-	<label for = 2>Enter another number: </label>
-	<input type = "text" name = "num2" id = 2>
-
-
-	<input type = "submit" value = "submit">
-
-
-
-
-
-</form>
-
- -->
-<h2> Hi, this is my first website. It allows you to calculate periodic compound interests and also allows you to calculate loan predictions. Enjoy
-	
-	</h2>
-
-
-<a href = "{% url 'interest_calculator' %}">Get started with the interest rate calculator</a>
 
 
 
