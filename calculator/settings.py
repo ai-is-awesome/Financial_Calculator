@@ -29,7 +29,7 @@ if SECRET_KEY == None:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [financial-calculator100.herokapp.com]
+ALLOWED_HOSTS = ['financial-calculator100.herokapp.com']
 
 # Application definition
 
