@@ -37,9 +37,9 @@ def results_interest(request):
 
 
 	except:
-		error_text = 'Sorry, no input received. Try again'
+		error_text = 'Sorry, no input received. '
 		
-		return render(request, 'calculator_app/results.html', {
+		return render(request, 'calculator_app/results_interest.html', {
 			"error_text" : error_text, "dict" : request.POST, 
 
 			})
@@ -70,11 +70,11 @@ def results_interest(request):
 
 
 
-	return render(request, 'calculator_app/results.html', context_dict)
+	return render(request, 'calculator_app/results_interest.html', context_dict)
 
 	
 
 
+def loan_calculator(request):
 
-
-
+	return render(request, 'calculator_app/loan.html')

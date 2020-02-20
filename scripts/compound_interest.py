@@ -31,12 +31,32 @@ def compound_interest(amount, interest, num_times_int, time_period, time_period_
     return total_investment
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
