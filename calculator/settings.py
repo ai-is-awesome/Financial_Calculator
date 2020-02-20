@@ -25,8 +25,7 @@ SECRET_KEY = '&dka##g-465l9mc7+immiu%5o^8lv)#u5$-u$t0ufen6y+w6e='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = [financial-calculator100.herokapp.com]
 
 # Application definition
 
