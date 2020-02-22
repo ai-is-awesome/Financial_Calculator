@@ -61,7 +61,7 @@ def calculate_periodic_payment(amount, interestPA, time_period, time_interval):
         
         
         
-    return average
+    return round(average, 2)
         
         
         

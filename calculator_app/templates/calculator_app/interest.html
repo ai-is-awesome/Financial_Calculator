@@ -10,7 +10,7 @@
 
 <div class = "container">
 	<div class = "well">
-	<form action = "{% url 'results_interest' %}" method = "POST">
+	<form action = "{% url 'results_interest' %}" method = "POST" autocomplete="off">
 		{% csrf_token %}
 
 		<label for = "amt">Enter the Amount: </label>

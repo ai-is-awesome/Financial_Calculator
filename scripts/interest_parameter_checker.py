@@ -1,4 +1,3 @@
-
 def is_valid_num(string):
 	if string.isdigit():
 		return True
@@ -38,4 +37,3 @@ def interest_parameter_checker(amount, interest, num_times_int, time_period, tim
         
 
         
-

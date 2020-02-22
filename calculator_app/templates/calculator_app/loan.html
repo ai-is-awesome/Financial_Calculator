@@ -5,12 +5,13 @@
 
 
 <div class = "container">
-
-<h1>Loan Calculator Coming soon!</h1>
-<h3>The Loan calculator app calculates the fixed monthly payments you can make for a given time period in which 
-	you're willing to payoff your loan!</h3>
-
-<form action = "{% url 'loan_calculator' %}" autocomplete = "paid-off" method = "POST">
+	<div class = "jumbotron">
+		<h1>Loan Calculator</h1>
+		<h3>This Loan calculator page calculates the fixed monthly payments you can make for a given time period in which 
+		you're willing to payoff your loan!</h3>
+	</div>
+</div>
+<form action = "{% url 'loan_calculator' %}" autocomplete = "off" method = "POST">
 	{% csrf_token %}
 	<div class = "container">
 	<div class = "well">
@@ -51,7 +52,7 @@
 	
 
 {% if valid_data %}
-	<br>
+	<div class = "container">
 	<div class = "well">
 	<h1>
 	The Monthly Payments to repay the loan in <strong>{{ time_period }} {{ time_interval }}</strong> on <strong>{{interest}}%</strong> interest is <strong>{{ monthly_amount }}</strong></h1>
@@ -65,22 +66,25 @@
 	Time Period: {{ time_period }} {{time_interval }}
 
 	</div>
+	</div>
 
 {% elif not valid_data %}
+
+	<div class = "container">
+	<div class = "well well-lg">
 	The inputs that you entered are of invalid format!<br>
 	Make sure you're typing numbers in the above fields. Try again
 	<br>
-
-
-{% endif %}
-
-
+	</div>
+	</div>
 
 {% endif %}
 
 
 
-<br><br><br><br>
+{% endif %}
+
+
 
 <br>
 <br>
