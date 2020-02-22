@@ -15,7 +15,7 @@ def periodic_payment_helper(amount, interestPA, time_period, periodic_payment):
     '''
     
     balance = amount
-    total_intervals = 12 * time_period
+    total_intervals = int(12 * time_period)
     
     
     for i in range(total_intervals + 1):
@@ -30,7 +30,12 @@ def periodic_payment_helper(amount, interestPA, time_period, periodic_payment):
 
 
 
-def calculate_periodic_payment(amount, interestPA, time_period):
+def calculate_periodic_payment(amount, interestPA, time_period, time_interval):
+    if time_interval == 'Months':
+        time_period = (time_period) // 12
+
+
+
     low = 0
     high = amount
     
@@ -52,7 +57,7 @@ def calculate_periodic_payment(amount, interestPA, time_period):
         
         if count > 5000:
             print('Count Exceeded by 5000')
-            return balance
+            return average
         
         
         

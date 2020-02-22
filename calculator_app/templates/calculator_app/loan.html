@@ -12,7 +12,9 @@
 
 <form action = "{% url 'loan_calculator' %}" autocomplete = "paid-off" method = "POST">
 	{% csrf_token %}
-	<label for = "loan_amount">Enter the loan amount to be paid-off: </label>
+	<div class = "container">
+	<div class = "well">
+	<label for = "loan_amount">Enter the loan amount to be paid-off(in percentage): </label>
 	<input type = "text" id = "loan_amount" name = "loan_amt">
 
 
@@ -38,47 +40,50 @@
 
 	<input type = "submit" value = "Submit">
 
-
+	</div>
+	</div>
 </form>
 
 
 
 
 {% if data_entered %}
-
-	{{ amount }}
-	{{ interest }}
-	{{ time_period }}
-	{{ time_interval }}
-	<br>
-	if statement reached, inputs should be dispalyed
-	<br>
+	
 
 {% if valid_data %}
-
-	The final answer is: {{ monthly_amount }}
 	<br>
+	<div class = "well">
+	<h1>
+	The Monthly Payments to repay the loan in <strong>{{ time_period }} {{ time_interval }}</strong> on <strong>{{interest}}%</strong> interest is <strong>{{ monthly_amount }}</strong></h1>
+
+
+	<br><br>
+	Your inputs were: 
+	<br>
+	Loan amount to be paid off: {{ amount }}<br>
+	Annual interest rate: {{ interest }}%<br>
+	Time Period: {{ time_period }} {{time_interval }}
+
+	</div>
 
 {% elif not valid_data %}
-	The data entered is invalid for some reason bitch!
+	The inputs that you entered are of invalid format!<br>
+	Make sure you're typing numbers in the above fields. Try again
 	<br>
 
-{% endif %}
 
-
-{% elif not data_entered %}
-
-	No data submitted. 
 {% endif %}
 
 
 
-Is parameter checker value is {{ valid_data }}
+{% endif %}
 
 
-{{ a }}
 
+<br><br><br><br>
 
+<br>
+<br>
 
 <!-- ending container division -->
 </div>
